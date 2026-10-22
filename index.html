@@ -1,16 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover immersive soundscapes for focus, relaxation, and everything in between.">
+    <meta name="theme-color" content="#0B0907">
 
     <title>Soundscape — Find Your Own Rhythm</title>
+    <meta
+        name="description"
+        content="Discover immersive soundscapes for focus, relaxation and everything in between."
+    >
 
-    <!-- Our stylesheet -->
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- Our JavaScript -->
     <script src="js/script.js" defer></script>
 </head>
 
@@ -18,98 +20,172 @@
 
     <!-- Navigation -->
     <header class="navbar">
-        <a href="#" class="logo">soundscape<span>.</span></a>
+        <a href="#home" class="brand" aria-label="Soundscape home">
+            <span class="brand-name">soundscape</span><span class="brand-period">.</span>
+        </a>
 
         <nav class="nav-links" aria-label="Main navigation">
-            <a href="#" class="nav-link active">Home</a>
+            <a href="#home" class="nav-link active">Home</a>
             <a href="#explore" class="nav-link">Explore</a>
             <a href="#library" class="nav-link">Library</a>
-            <a href="#about" class="nav-link">About</a>
         </nav>
 
-        <a href="#explore" class="nav-cta">Start listening</a>
+        <a href="#explore" class="nav-cta">Enter your space <span>↗</span></a>
     </header>
 
 
-    <!-- Main hero section -->
     <main>
+
+        <!-- Main landing screen -->
         <section class="hero" id="home">
 
+            <!-- Left: Main content -->
             <div class="hero-content">
-                <p class="eyebrow">YOUR SPACE, YOUR SOUND</p>
+                <p class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    YOUR SPACE, YOUR SOUND
+                </p>
 
-                <h1>Find your own rhythm.</h1>
+                <h1>
+                    Find your<br>
+                    own <span class="heading-accent">rhythm.</span>
+                </h1>
 
                 <p class="hero-description">
-                    Immersive soundscapes for focus, relaxation
-                    and everything in between.
+                    Immerse yourself in sound.
+                    Discover a quieter space for focus,
+                    relaxation, and everything in between.
                 </p>
 
                 <div class="hero-actions">
                     <a href="#explore" class="button button-primary">
-                        Explore sounds
+                        Explore sounds <span>↗</span>
                     </a>
 
                     <a href="#library" class="button button-secondary">
-                        Browse collections
+                        Discover collections
                     </a>
+                </div>
+
+                <div class="hero-note">
+                    <span class="status-dot"></span>
+                    A moment away from the noise.
                 </div>
             </div>
 
 
-            <!-- Featured sound card -->
-            <article class="sound-card" id="explore">
-                <div class="sound-card-top">
-                    <p class="card-label">FEATURED SOUND</p>
-                    <span class="sound-category">Ambient</span>
-                </div>
+            <!-- Right: Circular album orbit -->
+            <div class="orbit-stage" id="explore"
+                 aria-label="Featured album covers orbiting in a circle">
 
-                <div class="sound-info">
-                    <h2>Golden Hour</h2>
-                    <p>A moment of calm, wrapped in warmth.</p>
-                </div>
+                <div class="orbit-glow"></div>
 
-                <div class="sound-controls">
-                    <button
-                        class="play-button"
-                        type="button"
-                        aria-label="Play Golden Hour"
-                    >
-                        <span class="play-icon">▶</span>
-                    </button>
+                <div class="orbit-ring orbit-ring-outer"></div>
+                <div class="orbit-ring orbit-ring-inner"></div>
 
-                    <div class="sound-progress">
-                        <div class="progress-track">
-                            <div class="progress-fill"></div>
-                        </div>
+                <!-- The rotating track carries the album covers -->
+                <div class="orbit-track">
 
-                        <div class="sound-time">
-                            <span>00:00</span>
-                            <span>32:00</span>
-                        </div>
+                    <div class="orbit-item" style="--angle: 0deg;">
+                        <button class="album-cover cover-one"
+                                type="button"
+                                aria-label="Select Golden Hour">
+                            <span class="cover-art cover-art-one"></span>
+                            <span class="cover-caption">GOLDEN HOUR</span>
+                        </button>
                     </div>
+
+                    <div class="orbit-item" style="--angle: 60deg;">
+                        <button class="album-cover cover-two"
+                                type="button"
+                                aria-label="Select Stillwater">
+                            <span class="cover-art cover-art-two"></span>
+                            <span class="cover-caption">STILLWATER</span>
+                        </button>
+                    </div>
+
+                    <div class="orbit-item" style="--angle: 120deg;">
+                        <button class="album-cover cover-three"
+                                type="button"
+                                aria-label="Select Solstice">
+                            <span class="cover-art cover-art-three"></span>
+                            <span class="cover-caption">SOLSTICE</span>
+                        </button>
+                    </div>
+
+                    <div class="orbit-item" style="--angle: 180deg;">
+                        <button class="album-cover cover-four"
+                                type="button"
+                                aria-label="Select Afterglow">
+                            <span class="cover-art cover-art-four"></span>
+                            <span class="cover-caption">AFTERGLOW</span>
+                        </button>
+                    </div>
+
+                    <div class="orbit-item" style="--angle: 240deg;">
+                        <button class="album-cover cover-five"
+                                type="button"
+                                aria-label="Select Moonlight">
+                            <span class="cover-art cover-art-five"></span>
+                            <span class="cover-caption">MOONLIGHT</span>
+                        </button>
+                    </div>
+
+                    <div class="orbit-item" style="--angle: 300deg;">
+                        <button class="album-cover cover-six"
+                                type="button"
+                                aria-label="Select Earthbound">
+                            <span class="cover-art cover-art-six"></span>
+                            <span class="cover-caption">EARTHBOUND</span>
+                        </button>
+                    </div>
+
                 </div>
-            </article>
+
+                <!-- Center of the orbit -->
+                <div class="orbit-center">
+                    <span class="center-label">YOUR SOUND</span>
+                    <span class="center-symbol">✳</span>
+                    <span class="center-caption">Find your frequency</span>
+                </div>
+
+                <p class="orbit-caption">A WORLD OF SOUND, IN MOTION</p>
+            </div>
 
         </section>
 
 
-        <!-- Sections to develop later -->
-        <section class="placeholder-section" id="library">
-            <h2>Your library, your atmosphere.</h2>
-            <p>Your favourite soundscapes will have a home here.</p>
+        <!-- Featured listening panel -->
+        <section class="featured-section" id="library">
+            <div class="featured-label">
+                <span class="status-dot"></span>
+                CURATED FOR YOUR MOMENT
+            </div>
+
+            <div class="featured-track">
+                <div class="featured-art" aria-hidden="true">✳</div>
+
+                <div class="featured-info">
+                    <p class="track-category">FEATURED SOUNDSCAPE</p>
+                    <h2>Golden Hour</h2>
+                    <p>Ambient · A moment of calm</p>
+                </div>
+
+                <span class="track-duration">32 MIN</span>
+
+                <button class="play-button" type="button"
+                        aria-label="Play Golden Hour">
+                    <span>▶</span>
+                </button>
+            </div>
         </section>
 
-        <section class="placeholder-section" id="about">
-            <h2>Sound, with intention.</h2>
-            <p>A quieter space to focus, unwind, and find your rhythm.</p>
-        </section>
     </main>
 
 
-    <!-- Footer -->
     <footer class="footer">
-        <p>soundscape. <span>Find your own rhythm.</span></p>
+        <p>soundscape<span>.</span></p>
+        <p>Find your own rhythm.</p>
     </footer>
 
 </body>
